@@ -2,68 +2,38 @@
 
 /**
  *
- *  * main - program that prints all possible different combinations of 3 digits.
+ *  * main - print if the lowercase and uppercase alphabet
  *
- *   * Return: 0
+ *   * Description: using the main function
  *
- *    */
+ *    * Return: 0
+ *
+ *     */
 
 int main(void)
 
 {
 
-		int c = 0;
+	char ch;
 
-			int f_d;
+	for (ch = 'a' ; ch <= 'z' ; ch++)
 
-				int m_d;
+	{
 
-					int l_d;
+			putchar(ch);
 
+	}
 
+	for (ch = 'A' ; ch <= 'Z' ; ch++)
 
-						while (c <= 999)
+	{
 
-								{
+			putchar(ch);
 
-											f_d = (c / 100 + '0');
+	}
 
-													m_d = (c / 10 % 10 + '0');
+	putchar('\n');
 
-															l_d = (c % 10 + '0');
-
-
-
-																	if ((f_d < m_d) && (m_d < l_d))
-
-																				{
-
-																								putchar(f_d);
-
-																											putchar(m_d);
-
-																														putchar(l_d);
-
-
-
-																																	if (c != 789)
-
-																																					{
-
-																																										putchar(',');
-
-																																														putchar(' ');
-
-																																																	}
-
-																																			}
-
-																			c++;
-
-																				}
-
-						putchar('\n');
-
-						return (0);
+	return (0);
 
 }
