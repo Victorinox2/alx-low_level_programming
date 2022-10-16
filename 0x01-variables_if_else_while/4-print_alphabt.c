@@ -1,65 +1,37 @@
 #include <stdio.h>
 
-
-
 /**
  *
- *  * main - prints all possible combinations of two two-digit numbers
+ *  * main - print the lowercase alphabet without e and q
  *
- *   * Return: Always 0 (Success)
+ *   * Description: using the main function
  *
- *    */
+ *    * Return: 0
+ *
+ *     */
 
 int main(void)
 
 {
 
-		int i, j;
+	char ch;
 
+	for (ch = 'a' ; ch <= 'z' ; ch++)
 
+	{
 
-			for (i = 0; i < 100; i++)
+		if (ch != 'e' && ch != 'q')
 
-					{
+		{
 
-								for (j = 0; j < 100; j++)
+				putchar(ch);
 
-											{
+		}
 
-															if (i < j)
+	}
 
-																			{
+	putchar('\n');
 
-																								putchar((i / 10) + 48);
-
-																												putchar((i % 10) + 48);
-
-																																putchar(' ');
-
-																																				putchar((j / 10) + 48);
-
-																																								putchar((j % 10) + 48);
-
-																																												if (i != 98 || j != 99)
-
-																																																	{
-
-																																																							putchar(',');
-
-																																																												putchar(' ');
-
-																																																																}
-
-																																															}
-
-
-
-																	}
-
-									}
-
-				putchar('\n');
-
-					return (0);
+	return (0);
 
 }
