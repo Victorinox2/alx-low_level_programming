@@ -1,39 +1,31 @@
-i#include <stdio.h>
-
-#include <stdlib.h>
+#include <stdio.h>
 
 /**
  *
- *  * main - Entry point
+ *  * main - print the digit between 0 and 10
  *
- *   * Description: Print alphabets
+ *   * Description: using the main function
  *
  *    * Return: 0
  *
  *     */
 
-
-
 int main(void)
 
 {
 
-		char c = 'a';
+	int i;
 
+	for (i = 0; i < 10; i++)
 
+	{
 
-		while (c <= 'z')
+			printf("%i", i);
 
-		{
+	}
 
-			putchar(c);
+	printf("\n");
 
-			c++;
-
-		}
-
-		putchar('\n');
-
-		return (0);
+	return (0);
 
 }
