@@ -1,4 +1,4 @@
-lude "main.h"
+#include "main.h"
 
 
 
@@ -45,7 +45,3 @@ void print_square(int size)
 										}
 
 }
-
-Footer
-
-© 2022 GitHub, Inc.
