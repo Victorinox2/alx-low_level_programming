@@ -1,93 +1,159 @@
-nclude "main.h"
+#include "main.h"
 
-#include <stdio.h>
+		
 
 #include <stdlib.h>
 
-#include <stddef.h>
-
-
+		
 
 /**
  *
- *  * argstostr - Concatenates all arguments of the program into a string;
+ * 		
  *
- *   *             arguments are separated by a new line in the string.
+ * 		 * argstostr - main entry
  *
- *    * @ac: The number of arguments passed to the program.
+ * 		 		
  *
- *     * @av: An array of pointers to the arguments.
+ * 		 		 * @ac: int input
  *
- *      *
+ * 		 		 		
  *
- *       * Return: If ac == 0, av == NULL, or the function fails - NULL.
+ * 		 		 		 * @av: double pointer array
  *
- *        *         Otherwise - a pointer to the new string.
+ * 		 		 		 		
  *
- *         */
+ * 		 		 		 		 * Return: 0
+ *
+ * 		 		 		 		 		
+ *
+ * 		 		 		 		 		 */
+
+		
 
 char *argstostr(int ac, char **av)
 
+			
+
 {
 
-		char *str;
+			
 
-			int arg, byte, index, size = ac;
+		int i, n, r = 0, l = 0;
+
+				
+
+			char *str;
+
+					
 
 
+
+					
 
 				if (ac == 0 || av == NULL)
 
+							
+
 							return (NULL);
 
+						
 
 
-					for (arg = 0; arg < ac; arg++)
+
+						
+
+					for (i = 0; i < ac; i++)
+
+								
 
 							{
 
-										for (byte = 0; av[arg][byte]; byte++)
+										
 
-														size++;
+										for (n = 0; av[i][n]; n++)
+
+													
+
+														l++;
+
+												
 
 											}
 
+							
 
+						l += ac;
 
-						str = malloc(sizeof(char) * size + 1);
-
-
-
-							if (str == NULL)
-
-										return (NULL);
+								
 
 
 
-								index = 0;
+								
 
+							str = malloc(sizeof(char) * l + 1);
 
+									
 
-									for (arg = 0; arg < ac; arg++)
+								if (str == NULL)
+
+											
+
+											return (NULL);
+
+										
+
+									for (i = 0; i < ac; i++)
+
+												
 
 											{
 
-														for (byte = 0; av[arg][byte]; byte++)
+														
 
-																		str[index++] = av[arg][byte];
+													for (n = 0; av[i][n]; n++)
 
+																
 
+															{
 
-																str[index++] = '\n';
+																		
 
-																	}
+																		str[r] = av[i][n];
 
+																				
 
+																				r++;
 
-										str[size] = '\0';
+																						
 
+																					}
 
+															
 
-											return (str);
+														if (str[r] == '\0')
+
+																	
+
+																{
+
+																			
+
+																			str[r++] = '\n';
+
+																					
+
+																				}
+
+																
+
+															}
+
+											
+
+										return (str);
+
+												
 
 }
+
+

@@ -1,133 +1,167 @@
-#include <stdio.h>
+#include "main.h"
+
+		
 
 #include <stdlib.h>
 
-#include "main.h"
-
-
+		
 
 /**
  *
- *  * _strlen - find the length of a string of characters
+ * 		
  *
- *   * @s: pointer to the string
+ * 		 * str_concat - get ends of input and add together for size
  *
- *    * Return: void
+ * 		 		
  *
- *     */
-
-
-
-int _strlen(char *s)
-
-{
-
-		int i = 0;
-
-
-
-			for (; s[i] != '\0'; i++)
-
-						;
-
-				return (i);
-
-}
-
-
-
-/**
+ * 		 		 * @s1: input one to concat
  *
- *  * *str_concat - function that concatenates two strings
+ * 		 		 		
  *
- *   * @s1: first string
+ * 		 		 		 * @s2: input two to concat
  *
- *    * @s2: second string
+ * 		 		 		 		
  *
- *     * Return: pointer
+ * 		 		 		 		 * Return: concat of s1 and s2
  *
- *      */
+ * 		 		 		 		 		
+ *
+ * 		 		 		 		 		 */
 
-
+		
 
 char *str_concat(char *s1, char *s2)
 
+			
+
 {
 
-		int size1;
+			
 
-			int size2;
+		char *conct;
 
-				int i;
+				
 
-					char *z;
+			int i, ci;
 
-
-
-						if (s1 == NULL)
-
-								{
-
-											s1 = "\0";
-
-												}
-
-							if (s2 == NULL)
-
-									{
-
-												s2 = "\0";
-
-													}
+					
 
 
 
-								size1 = _strlen(s1);
+					
 
-									size2 = _strlen(s2);
+				if (s1 == NULL)
+
+							
+
+							s1 = "";
+
+						
+
+					if (s2 == NULL)
+
+								
+
+								s2 = "";
+
+							
 
 
 
-										z = malloc((size1 + size2) * sizeof(char) + 1);
+							
+
+							i = ci = 0;
+
+									
+
+								while (s1[i] != '\0')
+
+											
+
+											i++;
+
+										
+
+									while (s2[ci] != '\0')
+
+												
+
+												ci++;
+
+											
+
+										conct = malloc(sizeof(char) * (i + ci + 1));
+
+												
 
 
 
-											if (z == 0)
+												
 
-													{
+											if (conct == NULL)
 
-																return (0);
+														
 
-																	}
+														return (NULL);
+
+													
+
+												i = ci = 0;
+
+														
+
+													while (s1[i] != '\0')
+
+																
+
+															{
+
+																		
+
+																		conct[i] = s1[i];
+
+																				
+
+																				i++;
+
+																						
+
+																					}
+
+															
 
 
 
-												for (i = 0; i <= (size1 + size2); i++)
+															
 
-														{
+														while (s2[ci] != '\0')
 
-																	if (i < size1)
+																	
 
-																				{
+																{
 
-																								z[i] = s1[i];
+																			
 
-																										}
+																			conct[i] = s2[ci];
 
-																			else
+																					
 
-																						{
+																					i++, ci++;
 
-																										z[i] = s2[i - size1];
+																							
 
-																												}
+																						}
 
-																				}
+																
 
-													z[i] = '\0';
+															conct[i] = '\0';
 
-														return (z);
+																	
 
-															free(z);
+																return (conct);
+
+																		
 
 }
+
+
