@@ -1,31 +1,18 @@
 #include <stdio.h>
 
 /**
- *
- *  * main - print the digit between 0 and 9
- *
- *   * Description: using the main function
- *
- *    * Return: 0
- *
- *     */
-
+ * main - prints all single digit numbers of base 10 starting from 0,
+ * followed by a new line, using putchar
+ * Return: Always 0 (Success)
+ */
 int main(void)
-
 {
+	int n;
 
-	int c;
-
-	for (c = '0'; c <= '9'; c++)
-
+	for (n = 48; n < 58; n++)
 	{
-
-			putchar(c);
-
+		putchar(n);
 	}
-
 	putchar('\n');
-
 	return (0);
-
 }
