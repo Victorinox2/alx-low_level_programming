@@ -1,39 +1,24 @@
 #include <stdio.h>
 
 /**
- *
- *  * main - print the digit of base seize
- *
- *   * Description: using the main function
- *
- *    * Return: 0
- *
- *     */
-
+ * main - prints all the numbers of base 16 in lowercase,
+ * followed by a new line
+ * Return: Always 0 (Success)
+ */
 int main(void)
-
 {
+	int n;
+	char ch;
 
-	char c;
-
-	for (c = '0'; c <= '9'; c++)
-
+	for (n = 48; n < 58; n++)
 	{
-
-			putchar(c);
-
+		putchar(n);
 	}
-
-	for (c = 'a'; c <= 'f'; c++)
-
+	for (ch = 'a'; ch <= 'f'; ch++)
 	{
-
-			putchar(c);
-
+		putchar(ch);
 	}
-
 	putchar('\n');
-
 	return (0);
-
 }
+
