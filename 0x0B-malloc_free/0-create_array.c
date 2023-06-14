@@ -3,10 +3,10 @@
 /**
  * File: 0-create_array.c
  * Author: Victor Uwaoma
- * create_array - create array of size size and assign char c
- * @size: size of array
+ * Create_array - create array of size size and assign char c
+ * @size: Size of the array
  * @c: char to assign
- * Description: create array of size size and assign char c
+ * Description: Create an array of size size and assign char c
  * Return: pointer to array, NULL if fail
  *
  */

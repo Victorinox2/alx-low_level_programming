@@ -1,8 +1,3 @@
-/**
- * File: main.h
- * Author: Victor Uwaoma
- */
-
 #ifndef MAIN_H
 #define MAIN_H
 
