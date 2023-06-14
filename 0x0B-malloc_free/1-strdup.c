@@ -1,9 +1,15 @@
+/*
+ * File:  1-strdup.c
+
+ * Author: Victor Uwaoma
+ 
+ */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include "main.h"
+
 /**
- * File: 1-strdup.c
- * Author: Victor Uwaoma
  * _strdup - duplicate to the new memory space location
  * @str: char
  * Return: 0
