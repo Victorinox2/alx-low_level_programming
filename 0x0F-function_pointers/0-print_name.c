@@ -1,6 +1,8 @@
 #include "function_pointers.h"
 #include <stdio.h>
 /**
+ * File: 0-print_name.c
+ * Author: Victor Uwaoma
  * print_name - prints the name using pointer to function
  * @name: string to add
  * @f: pointer to function
