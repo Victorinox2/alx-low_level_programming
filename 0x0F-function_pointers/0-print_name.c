@@ -1,13 +1,15 @@
-#include "function_pointers.h"
-#include <stdio.h>
-/**
+/*
  * File: 0-print_name.c
- * Author: Victor Uwaoma
- * print_name - prints the name using pointer to function
- * @name: string to add
- * @f: pointer to function
- * Return: nothing
- **/
+ * Auth: Victorinox2
+ */
+
+#include "function_pointers.h"
+
+/**
+ * print_name - Prints the name.
+ * @name: The name to be printed.
+ * @f: A pointer to the function that prints a name.
+ */
 void print_name(char *name, void (*f)(char *))
 {
 	if (name == NULL || f == NULL)
